@@ -1,5 +1,4 @@
-#include "Engine.hpp"
-import vulkan_hpp;
+#include "EngineApp.hpp"
 #include <GLFW/glfw3.h>
 
 
@@ -8,14 +7,11 @@ import vulkan_hpp;
 #include <cstdlib>
 
 int main() {
-    Engine engine;
+    lve::EngineApp app{};
 
     try {
-        engine.run();
-    } catch (const std::exception& e) {
-        std::cerr << e.what() << std::endl;
-    return EXIST_FAILURE;
-    }
+        app.run();
+    } catch (const std::exception &e) {
 
-    return EXIST_SUCESS;
+    }
 }
